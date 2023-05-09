@@ -1,0 +1,63 @@
+1. Check docker is correctly installed ?
+
+docker 
+
+
+2. Check Version of docker
+
+docker -v
+
+
+3. Create docker image
+
+docker build -t image-name .
+
+
+4. Check docker images has been built or not 
+
+docker images
+
+
+5. run the docker image with host and container port
+
+docker run -p 5000:5000 welcome-app
+
+
+6. Check how many containers are running 
+
+docker ps
+
+
+7. Stop the container
+
+docker stop container_id
+
+
+8. Login to DockerHub
+
+docker login
+
+
+9. Remove a docker image
+
+docker image rm -f image-name
+
+
+10. Rename the image - Part 1
+
+docker build -t gaurav178829/welcome-app .
+
+
+11. Rename the image - Part 2
+
+docker tag gaurav178829/welcome-app gaurav178829/welcome-app1
+
+
+12. Push the image into dockerhub repo
+
+docker push gaurav178829/welcome-app:latest
+
+
+13. Run the docker image in detach mode
+
+docker run -d -p 5000:5000 gaurav178829/welcome-app:latest
